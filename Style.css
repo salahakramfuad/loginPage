@@ -1,0 +1,201 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Signika+Negative:wght@300;400&family=Signika:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+    text-decoration:none;
+    color: #fff;
+
+}
+body{
+    background-image: url(6640524.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.5rem 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+
+
+}
+.Logo img{
+    max-width: 100%;
+    width: 100px;
+    height: auto;
+}
+ul.navlist{
+    display: flex;
+    align-items: center;
+}
+ul.navlist li{
+    margin-left: 1.5rem;
+    position: relative
+}
+ul.navlist li::after{
+    content: "";
+    position:absolute;
+    bottom: -5px;
+    left:0;
+    width:0%;
+    height:2px;
+    background: #fff;
+    transition: all .4s ease-in;
+}
+ul.navlist li:hover:after{
+    width:100%;
+}
+ul.navlist li a{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.Login-Button{
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    background: transparent;
+    color:#fff;
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    border-radius: .5rem;
+    font-weight: 600;
+    cursor: grab;
+    z-index: 1;
+    overflow: hidden;
+}
+.Login-Button:hover{
+    color: rgb(7, 9, 9);
+}
+.Login-Button::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    padding: 2rem 1rem;
+    display: block;
+    transition: all ease .65s;
+    left: -50%;
+    right: -50%;
+    top:-50%;
+    line-height: 8.34rem;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0,0);
+}
+.Login-Button:hover:after{
+    transform: scale(1,1);
+}
+.card{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    -webkit-backdrop-filter: blur(.8rem);
+    backdrop-filter: blur(.8rem);
+    border: 2px solid rgb(83, 168, 197);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease-out;
+}
+section{
+    padding: .5rem;
+    width: 100%;
+}
+form .inputBox{
+    position: relative;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    height: 2rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+.inputBox input{
+    background: transparent;
+    outline:none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px 0 3px;
+}
+.inputBox lebel{
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    -webkit-transform: translateY(-50%);
+    
+    font-size: 1rem;
+    transition: all .45s ease;
+    pointer-events: none;
+}
+
+.inputBox input:focus~lebel,
+.inputBox input:valid~lebel{
+    top: -3px;
+}
+
+.revovery-password{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .9rem;
+    margin: 10px 0;
+
+}
+.revovery-password lebel input{
+    margin: 5px;
+}
+.revovery-password a:hover{
+    text-decoration: underline;
+}
+form button{
+    width:100%;
+    color: rgba(113, 7, 199, 0.518);
+    border: none;
+    padding:14px 0;
+    border-radius: .5rem;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: grabbing;
+}
+.registerDown{
+    text-align: center;
+    font-size: .92rem;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.registerDown p a:hover{
+    text-decoration: underline;
+}
+.closebutton{
+    position: absolute;
+    top: 8px;
+    left:8px;
+    
+    cursor: grab;
+    display: inline-flex;
+}
+.closebutton i{
+    color:aqua;
+    font-size: 1.3rem;
+    font-weight: 50;
+}
